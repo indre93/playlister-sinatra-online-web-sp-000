@@ -20,8 +20,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    raise params.inspect
-
+    binding.pry
     @song = Song.new(params["Name"])
     @song.artist = Artist.find_or_create_by(params["Artist Name"])
     @song.genre_ids = params[:genres]
