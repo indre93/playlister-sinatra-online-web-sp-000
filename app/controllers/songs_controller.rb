@@ -15,12 +15,13 @@ class SongsController < ApplicationController
   end
 
   get '/songs/:slug' do
-    raise params.inspect
     @song = Song.find_by_slug(params[:slug])
     erb :'/songs/show'
   end
 
   post '/songs' do
+    raise params.inspect
+
     @song = Song.new(params["Name"])
     @song.artist = Artist.find_or_create_by(params["Artist Name"])
     @song.genre_ids = params[:genres]
