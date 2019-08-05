@@ -6,8 +6,8 @@
     <label for="name">Song Name: </label>
       <input id="name" type="text" name="song[name]" value="<%= @song.name %>">
 
-    <label for="Artist Name">Artist Name: </label>
-      <input id="Artist Name" type="text" name="artist[name]" value="<%= @song.artist.name %>">
+    <label for="artist_name">Artist Name: </label>
+      <input id="artist_name" type="text" name="artist[name]" value="<%= @song.artist.name %>">
     <br><br>
 
     <% Genre.all.each do |genre| %>
